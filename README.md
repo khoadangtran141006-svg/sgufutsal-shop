@@ -1,1 +1,1 @@
-# sgufutsal-
+# sgufutsal-shop
