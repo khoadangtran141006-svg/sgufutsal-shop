@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SGUSPORT | TRANG CHỦ</title>
+  <link rel="icon" type="image/jpeg" href="./img/sgufutsal.jpg">
+  <link rel="stylesheet" href="./css/trangchuuser.css">
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo" style="background-image: url('./img/sgufutsal.jpg');"></div>
+      <div class="search">SGUSPORT - CHÍNH HÃNG - CHẤT LƯỢNG</div>
+    </header>
+
+    <!-- Tabs -->
+   <div class="tabs">
+  <!-- TRANG CHỦ -->
+  <a class="tab" onclick="showSection('home')">TRANG CHỦ</a>
+
+  <!-- THƯƠNG HIỆU (Giày đá banh) -->
+  <div class="tab tab-dropdown">
+    <a onclick="showSection('L001')">THƯƠNG HIỆU</a>
+    <div class="tab-dropdown-content">
+      <a href="#" onclick="showSection('L001','nike')">NIKE</a>
+      <a href="#" onclick="showSection('L001','adidas')">ADIDAS</a>
+      <a href="#" onclick="showSection('L001','puma')">PUMA</a>
+      <a href="#" onclick="showSection('L001','mizuno')">MIZUNO</a>
+      <a href="#" onclick="showSection('L001','hangkhac')">HÃNG KHÁC</a>
+    </div>
+  </div>
+
+  <!-- PHỤ KIỆN -->
+  <div class="tab tab-dropdown">
+    <a onclick="showSection('L002','all')">PHỤ KIỆN</a>
+    <div class="tab-dropdown-content">
+      <a href="#" onclick="showSection('L002','bongda')">BÓNG ĐÁ</a>
+      <a href="#" onclick="showSection('L002','vo')">VỚ</a>
+      <a href="#" onclick="showSection('L002','gangtay')">GĂNG TAY THỦ MÔN</a>
+      <a href="#" onclick="showSection('L002','tui')">BALO & TÚI THỂ THAO</a>
+    </div>
+  </div>
+
+  <div class="tab" onclick="showSection('infor-section')">
+    <a>THÔNG TIN</a>
+  </div>
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+  <button onclick="searchBasic()">Tìm</button>
+</div>
+
+      <!-- Góc phải: tài khoản -->
+      <div class="user-account" id="userAccount">
+        <span id="loginText">ĐĂNG NHẬP / ĐĂNG KÝ</span>
+      </div>
+    </div>
+
+    <!-- Nội dung -->
+    <main class="main">
+      <h2 class="title">TẤT CẢ CÁC LOẠI SẢN PHẨM VỀ BÓNG ĐÁ</h2>
+<!-- Tìm kiếm nâng cao -->
+<div class="search-advanced">
+  <input type="text" id="searchInputAdvanced" placeholder="Tên sản phẩm...">
+  <select id="categoryAdvanced">
+    <option value="">Loại Giày</option>
+    <option value="giaycotunhien">Giày cỏ tự nhiên</option>
+    <option value="giayconhantao">Giày cỏ nhân tạo</option>
+    <option value="giayfutsal">Giày futsal</option>
+  </select>
+ 
+  <input type="number" id="minPrice" placeholder="Giá từ">
+  <input type="number" id="maxPrice" placeholder="Đến">
+  <button onclick="searchAdvanced()">Tìm nâng cao</button>
+</div>
+
+<!-- Grid sản phẩm -->
+<div id="productGrid" class="grid"></div>
+<div id="pagination" class="pagination"></div>
+      <!-- Phân trang -->
+      <div id="pagination" class="pagination"></div>
+      <!-- Intro / banner -->
+      <div class="intro">
+        <div class="intro-grid">
+          <div class="box"><img src="img/nen2.jpeg" alt="nen2"></div>
+          <div class="box"><img src="img/nen3.jpeg" alt="nen3"></div>
+          <div class="box"><img src="img/nen4.jpeg" alt="nen4"></div>
+          <div class="box"><img src="img/nen1.jpeg" alt="nen1"></div>
+        </div>
+      </div>
+    </main>
+
+<section class="main" id="infor-section" style="display:none">
+   <div class="brand-detail">
+              <h2 class="title">Giới Thiệu Các Loại Giày Bóng Đá Phổ Biến</h2>
+      <section id="giaycotunhien">
+        <h2>GIÀY CỎ TỰ NHIÊN</h2>
+        <img src="img/tunhien.jpg" alt="Giày Cỏ Tự Nhiên">
+        <p>Giày đá bóng cỏ tự niên là loại giày có thiết kế đinh đặc biệt (FG, AG-PRO, MG) để hỗ trợ chơi bóng trên sân cỏ 11 người.
+Đến với SGUSPORT bạn có thể dễ dàng trải nghiệm những mẫu giày cỏ tự nhiên mới nhất và được săn đón nhiều nhất từ các thương hiệu hang đầu trong và ngoài nucows hiện nay như Nike, Adidas, Puma, Mizuno.
+        </p>
+      </section>
+
+            <section id="giayconhantao">
+        <h2>GIÀY CỎ NHÂN TẠO</h2>
+        <img src="img/nhantao.jpg" alt="Giày Cỏ Nhân Tạo">
+        <p> Giày đá bóng sân cỏ nhân tạo là giày đá bóng được thiết kế dành riêng cho sân cỏ nhân tạo, đế cao su có đinh dăm, có độ bám sân khá tốt. Mỗi hang giày sẽ sản xuất đế giày đinh dăm TF có độ dài ngắn khác nhau. Đến với SGUSPORT bạn có thể dễ dàng trải nghiệm những mẫu giày cỏ nhân tạo mới nhất và được săn đón nhiều nhất từ các thương hiệu hang` đầu trong và ngoài nước hiện nay như Nike, Adidas, Mizuno,..
+        </p>
+      </section>
+
+            <section id="giayfutsal">
+        <h2>GIÀY FUTSAL</h2>
+        <img src="img/futsal.jpg" alt="Giày Futsal">
+        <p>Giày Futsal là dòng giày đá bóng được thiết kế đặc biệt dành cho mặt sân sàn gỗ hoặc bê tông, với bề mặt đế IC (Non-Marking) bằng phẳng cùng các rãnh nhỏ giúp tăng độ bám, hỗ trợ tối đa khả năng kiểm soát bóng bằng gầm giày, xoay trở linh hoạt và thực hiện các động tác kỹ thuật.
+
+Đến với SGUSPORT bạn có thể dễ dàng trải nghiệm những mẫu giày Futsal mới nhất và được săn đón nhiều nhất từ các thương hiệu hàng đầu trong và ngoài nước hiện nay.
+      </section>
+
+              <h2 class="title">Các Thương Hiệu Nổi Tiếng</h2>
+      <!-- Nike -->
+      <section id="nike">
+        <h2>NIKE</h2>
+        <img src="img/nike.jpg" alt="Nike">
+        <p>Thương hiệu cung cấp giày bóng đá chính hãng và các phụ kiện bóng đá lớn nhất thế giới, được thành lập năm 1964 tại Hoa Kỳ, là biểu tượng của tốc độ, 
+          kỹ thuật và phong cách thể thao. SGUSPORT mang đến những mẫu Nike chính hãng từ dòng Tiempo, Mercurial, 
+          đến Phantom, phục vụ mọi vị trí trên sân.</p>
+      </section>
+
+      <section id="nike-tiempo">
+        <h2>NIKE TIEMPO</h2>
+        <img src="img/tiempo.jpg" alt="Nike Tiempo">
+        <p>Dòng giày cảm giác (TOUCH) nổi tiếng với da tự nhiên mềm mại, cho cảm giác êm ái trong từng pha chạm bóng. Được nhiều hậu vệ và tiền vệ trung tâm tin dùng.</p>
+      </section>
+
+      <section id="nike-mercurial">
+        <h2>NIKE MERCURIAL</h2>
+        <img src="img/mercurial.jpg" alt="Nike Mercurial">
+        <p>Biểu tượng của tốc độ. Thiết kế nhẹ, đế mỏng, tối ưu cho khả năng tăng tốc và bứt phá. Các ngôi sao như Mbappe, CR7 đều tin dùng dòng giày này.</p>
+      </section>
+
+      <section id="nike-phantom">
+        <h2>NIKE PHANTOM</h2>
+        <img src="img/phantom.jpg" alt="Nike Phantom">
+        <p>Dòng giày dành cho người chơi kỹ thuật, kiểm soát bóng và dứt điểm chính xác. Phù hợp với tiền đạo và tiền vệ tấn công.</p>
+      </section>
+
+      <!-- Adidas -->
+      <section id="adidas">
+        <h2>ADIDAS</h2>
+        <img src="img/adidas.jpg" alt="Adidas">
+        <p>Adidas là thương hiệu bóng đá lớn nhất châu Âu, nổi tiếng với sự bền bỉ và tinh tế trong thiết kế. SGUSPORT mang đến các dòng F50, X và Predator.</p>
+      </section>
+
+      <section id="adidas-f50">
+        <h2>ADIDAS F50</h2>
+        <img src="img/f50.jpg" alt="Adidas F50">
+        <p>Dòng giày nhẹ, linh hoạt, tối ưu tốc độ, phù hợp với cầu thủ chạy cánh và tiền đạo.</p>
+      </section>
+
+      <section id="adidas-x">
+        <h2>ADIDAS X</h2>
+        <img src="img/x.jpg" alt="Adidas X">
+        <p>Dòng giày hiện đại mang phong cách tấn công mạnh mẽ. Thích hợp cho những cầu thủ ưa thích sự táo bạo và tốc độ.</p>
+      </section>
+
+      <section id="adidas-predator">
+        <h2>ADIDAS PREDATOR</h2>
+        <img src="img/predator.jpg" alt="Adidas Predator">
+        <p>Predator nổi tiếng với khả năng kiểm soát bóng tuyệt vời và hỗ trợ sút xa mạnh mẽ. Dòng giày huyền thoại gắn liền với Beckham.</p>
+      </section>
+
+      <!-- Puma -->
+      <section id="puma">
+        <h2>PUMA</h2>
+        <img src="img/puma.jpg" alt="Puma">
+        <p>Puma mang đến sự pha trộn giữa tốc độ và sáng tạo. Các dòng King và Future là đại diện tiêu biểu của thương hiệu này.</p>
+      </section>
+
+      <section id="puma-king">
+        <h2>PUMA KING</h2>
+        <img src="img/king.jpg" alt="Puma King">
+        <p>Giày da cao cấp mang phong cách cổ điển, cảm giác bóng mượt mà, thích hợp cho cầu thủ điều tiết lối chơi.</p>
+      </section>
+
+      <section id="puma-future">
+        <h2>PUMA FUTURE</h2>
+        <img src="img/future.jpg" alt="Puma Future">
+        <p>Dòng giày mang phong cách hiện đại, có dây giày tùy chỉnh, mang lại sự thoải mái và kiểm soát tối đa.</p>
+      </section>
+
+      <!-- Mizuno -->
+      <section id="mizuno">
+        <h2>MIZUNO</h2>
+        <img src="img/mizuno.jpg" alt="Mizuno">
+        <p>Mizuno – thương hiệu Nhật Bản nổi tiếng với độ bền và cảm giác bóng tuyệt vời. Hai dòng nổi bật là Alpha và Rebula.</p>
+      </section>
+
+      <section id="mizuno-alpha">
+        <h2>MIZUNO ALPHA</h2>
+        <img src="img/alpha.jpg" alt="Mizuno Alpha">
+        <p>Dòng giày tốc độ siêu nhẹ, phù hợp với cầu thủ chạy cánh, tăng tốc nhanh và linh hoạt.</p>
+      </section>
+
+      <section id="mizuno-rebula">
+        <h2>MIZUNO REBULA</h2>
+        <img src="img/rebula.jpg" alt="Mizuno Rebula">
+        <p>Dòng giày điều khiển bóng chính xác, mang lại cảm giác thật chân, được nhiều tiền vệ yêu thích.</p>
+      </section>
+
+      <!-- mục thông tin-->
+      <section id="thongtin">
+        <h2>THÔNG TIN</h2>
+        <img src="img/tt1.jpg" alt="Thông Tin">
+        <p>Bóng đá là môn thể thao vua, nơi hội tụ niềm đam mê, tinh thần đồng đội và cảm xúc mãnh liệt của hàng triệu con người trên khắp thế giới. Trên sân cỏ, mọi khoảng cách về ngôn ngữ, màu da hay quốc tịch đều bị xóa nhòa, chỉ còn lại quả bóng tròn và khát khao chiến thắng. Bóng đá không chỉ là trò chơi, mà còn là nghệ thuật, là nơi con người thể hiện ý chí, kỹ thuật và sự sáng tạo. Mỗi pha chuyền, mỗi cú sút, mỗi bàn thắng đều chứa đựng công sức và cảm xúc của cả tập thể. Ở Việt Nam, bóng đá còn là niềm tự hào dân tộc, là sợi dây gắn kết con người trong từng khoảnh khắc chiến thắng</p>
+        <img src="img/tt3.jpg" alt="Thông Tin 1">
+        <p>Từ những trận cầu đường phố đến các sân vận động lớn, bóng đá luôn mang đến niềm vui, niềm tin và động lực cho mọi người. Nó dạy ta biết nỗ lực, đoàn kết và không bao giờ bỏ cuộc — những giá trị vượt xa khỏi sân cỏ. Bóng đá không chỉ là môn thể thao, mà còn là biểu tượng của sự kiên cường và khát vọng vươn lên. Mỗi cầu thủ khi bước ra sân đều mang trong mình giấc mơ chiến thắng và tinh thần cống hiến hết mình vì tập thể. Người hâm mộ trên khán đài, dù ở bất cứ nơi đâu, đều chung một nhịp đập con tim khi đội bóng yêu thích ghi bàn hay chiến đấu đến phút cuối cùng. Bóng đá mang lại những cung bậc cảm xúc khác nhau — vui mừng, hồi hộp, tiếc nuối — nhưng chính điều đó làm nên sức hấp dẫn đặc biệt của nó. Không chỉ dành cho đàn ông, bóng đá ngày nay còn được yêu thích mạnh mẽ bởi phụ nữ và trẻ em.</p>
+        <img src="img/tt2.jpg" alt="Thông Tin 2">
+        <p>Giày bóng đá là người bạn đồng hành không thể thiếu của mỗi cầu thủ trên sân cỏ. Không chỉ đơn thuần là một đôi giày, nó còn là công cụ giúp cầu thủ thể hiện phong cách, kỹ thuật và phong độ thi đấu. Mỗi đôi giày được thiết kế đặc biệt để phù hợp với từng loại sân — từ sân cỏ tự nhiên, cỏ nhân tạo cho đến futsal trong nhà. Đế giày có gai hoặc đinh giúp bám sân tốt hơn, tăng độ ổn định khi di chuyển và sút bóng. Các thương hiệu lớn như Nike, Adidas, Puma, Mizuno luôn không ngừng cải tiến công nghệ, mang đến những sản phẩm nhẹ hơn, linh hoạt hơn và tối ưu cảm giác bóng.</p>
+      </section>
+    </div> 
+  </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>VỀ SGUSPORT</h3>
+          <p>SGUSPORT là cửa hàng chuyên cung cấp giày bóng đá chính hãng, đảm bảo chất lượng và uy tín hàng đầu Việt Nam.</p>
+        </div>
+        <div class="footer-col">
+          <h3>LIÊN HỆ</h3>
+          <p>📍 273 An Dương Vương, Q.5, TP.HCM</p>
+          <p>📞 0909 123 456</p>
+          <p>✉️ sgusport@gmail.com</p>
+          <p>🕒 Làm việc: 8:00 - 21:00 (Thứ 2 - CN)</p>
+        </div>
+        <div class="footer-col">
+          <h3>THEO DÕI CHÚNG TÔI</h3>
+          <div class="social-links">
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 SGUSPORT | All Rights Reserved</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- POPUP -->
+  <div class="popup" id="popup">
+    <!-- Login Form -->
+    <div class="popup-content" id="loginForm">
+      <span class="close-popup" id="closePopup">&times;</span>
+      <h2>Đăng nhập</h2>
+      <input type="text" id="loginUser" placeholder="Tên đăng nhập">
+      <input type="password" id="loginPass" placeholder="Mật khẩu">
+      <button onclick="login()">Đăng nhập</button>
+      <p>Chưa có tài khoản? <span class="toggle-link" onclick="showRegister()">Đăng ký</span></p>
+    </div>
+
+    <!-- Register Form -->
+    <div class="popup-content" id="registerForm" style="display:none;">
+      <span class="close-popup" id="closePopup2">&times;</span>
+      <h2>Đăng ký</h2>
+      <input type="text" id="regFullname" placeholder="Họ và tên">
+      <input type="text" id="regPhone" placeholder="Số điện thoại">
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="text" id="regAddress" placeholder="Địa chỉ giao hàng">
+      <input type="text" id="regUser" placeholder="Tên đăng nhập">
+      <input type="password" id="regPass" placeholder="Mật khẩu">
+      <input type="password" id="regConfirm" placeholder="Nhập lại mật khẩu">
+      <button onclick="register()">Đăng ký</button>
+      <p>Đã có tài khoản? <span class="toggle-link" onclick="showLogin()">Đăng nhập</span></p>
+    </div>
+  </div>
+  <script src="./js/trangchuuser.js" defer></script>
+  <script src="data.js" defer></script>
+</body>
+</html>

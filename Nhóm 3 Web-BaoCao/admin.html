@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGUSPORT - Trang Quản Lý Admin</title>
+  <link rel="icon" type="image/jpeg" href="img/sgufutsal.jpg">
+  <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+  <!--KHUNG ĐĂNG NHẬP-->
+  <div id="khungDangNhap" class="login-container">
+    <div class="login-box">
+      <h2>Đăng Nhập</h2>
+      <form id="formDangNhapAdmin">
+        <div class="input-group">
+          <label for="taikhoan">Tài khoản</label>
+          <input type="text" id="taikhoan" placeholder="admin1/admin2/admin3" required>
+        </div>
+        <div class="input-group">
+          <label for="matkhau">Mật khẩu</label>
+          <input type="password" id="matkhau" placeholder="12345@12345" required>
+        </div>
+        <button type="submit">Đăng nhập</button>
+        <p id="thongbao"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- GIAO DIỆN ADMIN-->
+  <div id="khungAdmin" class="admin-container" style="display:none;">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>TRANG QUẢN LÝ</h2>
+      <ul class="menu">
+        <li><a href="#" data-section="dashboard" class="active">Trang chủ</a></li>
+        <li><a href="#" data-section="nguoidung">Quản lý người dùng</a></li>
+        <li><a href="#" data-section="loaisp">Quản lý loại sản phẩm</a></li>
+        <li><a href="#" data-section="sanpham">Quản lý sản phẩm</a></li>
+        <li><a href="#" data-section="nhaphang">Quản lý nhập hàng</a></li>
+        <li><a href="#" data-section="giaban">Quản lý giá bán</a></li>
+        <li><a href="#" data-section="donhang">Quản lý đơn hàng</a></li>
+        <li><a href="#" data-section="tonkho">Quản lý tồn kho</a></li>
+        <li><a href="#" id="btnDangXuat">Đăng xuất</a></li>
+      </ul>
+    </aside>
+
+    <!-- main -->
+    <main class="main-content">
+      <header class="main-header">
+        HỆ THỐNG QUẢN TRỊ BÁN HÀNG CỬA HÀNG GIÀY BÓNG ĐÁ SGUSPORT
+      </header>
+
+      <section id="noiDung" class="section-content">
+        <h3>Danh sách sản phẩm</h3>
+
+        <!-- FORM THÊM SẢN PHẨM  -->
+        <div class="them-sp" >
+          <h3>Thêm sản phẩm mới</h3>
+          <label>Mã sản phẩm:</label>
+          <input type="text" id="maSP" placeholder="SPxx"><br>
+          <label>Tên sản phẩm:</label>
+          <input type="text" id="tenSP" placeholder="Nhập tên sản phẩm"><br>
+          <label>Giá:</label>
+          <input type="number" id="giaSP" placeholder="Nhập giá"><br>
+          <label>Hình ảnh (đường dẫn):</label>
+          <input type="text" id="hinhSP" placeholder="img/abc.jpg"><br>
+          <label>Loại sản phẩm:</label>
+          <input type="text" id="loaiSP" placeholder=".."><br>
+          <label>Hãng:</label>
+            <select id="q_sp_hang">
+              <option value="">-- Chọn hãng --</option>
+              <option value="Nike">Nike</option>
+              <option value="Adidas">Adidas</option>
+              <option value="Puma">Puma</option>
+              <option value="Mizuno">Mizuno</option>
+              <option value="HangKhac">Hãng Khác</option>
+          </select><br>
+          <label>Mô tả:</label>
+          <textarea id="moTaSP" rows="3" placeholder="Nhập mô tả..."></textarea><br>
+          <button id="btnThemSP">Thêm sản phẩm</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/admin.js" defer></script>
+  <script src="data.js" defer></script>
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-bottom">
+    <p>© 2025 TRANG QUẢN LÝ SGUSPORT | All Rights Reserved</p>
+  </div>
+</footer>
+</body>
+</html>

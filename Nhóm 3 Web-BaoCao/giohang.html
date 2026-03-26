@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="./img/sgufutsal.jpg">
+  <title>Giỏ hàng | SGU Sports</title>
+  <link rel="stylesheet" href="./css/gh.css">
+  <link rel="stylesheet" href="./css/ct.css">
+
+  <style>
+    /* Ẩn/hiện phần nội dung */
+    .hidden { display: none; }
+    .active { display: block; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="./img/sgufutsal.jpg" alt="Logo">
+    <h1>SGU Sports</h1>
+  </div>
+  <nav>
+    <span onclick="location.href='trangchuuser.html'">Trang chủ</span>
+    <span onclick="showSection('detail')">Chi tiết</span>
+    <span onclick="showSection('cart')">Giỏ hàng</span>
+     <span onclick="location.href='orders.html'">Chờ Giao Hàng</span>
+  </nav>
+</header>
+
+<!--  CHI TIẾT SẢN PHẨM  -->
+<main>
+  <section id="detail" class="active">
+    <div class="detail">
+      <div class="detail-img">
+        <img id="product-img" src="img/noimage.jpg" alt="">
+      </div>
+      <div class="detail-info">
+        <h2 id="product-name">Tên sản phẩm</h2>
+        <p id="product-brand">Thương hiệu</p>
+        <p id="product-desc" style="margin-top: 10px; color: #555; font-size: 0.9em;">
+          Đang tải mô tả...
+        </p>
+        <p class="price" id="product-price">0₫</p>
+
+        <div class="buy-section">
+          <input id="qty" type="number" min="1" value="1">
+          
+          <button class="btn" id="add-cart">Thêm vào giỏ</button>
+          <button class="btn buy-now" id="buy-now" >Mua ngay</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- GIỎ HÀNG  -->
+<section id="cart" class="hidden">
+  <h2>🛒 Giỏ hàng của bạn</h2>
+  <div id="cart-items"></div>
+  <h3>Tổng cộng: <span id="total-price">0₫</span></h3>
+  <button id="checkout">Thanh toán</button>
+  <button id="back-detail">⬅ Quay lại chi tiết</button>
+</section>
+<!-- Popup thanh toán dạng modal -->
+<div id="payment-popup" class="payment-popup hidden">
+  <div class="popup-content">
+  
+      <h2>🧾 Thông tin thanh toán</h2>
+
+      <label for="customer-name">Họ tên:</label>
+      <input type="text" id="customer-name" placeholder="Nhập họ tên của bạn">
+
+      <label for="customer-phone">Số điện thoại:</label>
+      <input type="tel" id="customer-phone" placeholder="Nhập số điện thoại">
+
+      <label>Địa chỉ giao hàng:</label>
+      <div class="address-choice" style="margin-bottom: 10px;">
+        <label style="display: block; margin-bottom: 5px;">
+            <input type="radio" name="addressChoice" id="use-saved-address" value="saved" checked>
+            Dùng địa chỉ đã lưu:
+            <strong id="saved-address-text"></strong>
+        </label>
+        <label style="display: block;">
+            <input type="radio" name="addressChoice" id="use-new-address" value="new">
+            Dùng địa chỉ mới:
+        </label>
+      </div>
+      
+      <input type="text" id="customer-address" placeholder="Nhập địa chỉ nhận hàng mới" style="display: none; margin-bottom: 15px;">
+      <label for="customer-note">Ghi chú size (Bắt buộc):</label>    
+      <input type="text" id="customer-note" placeholder="VD: Đôi Nike Phantom - size 41" >
+      <label for="payment-method">Phương thức thanh toán:</label>
+      <select id="payment-method">
+        <option value="cash">💵 Tiền mặt khi nhận hàng</option>
+        <option value="bank">🏦 Chuyển khoản ngân hàng</option>
+        <option value="momo">📱 Ví Momo</option>
+      </select>
+
+    <div class="summary">
+      <p><strong>Tổng tiền:</strong> <span id="payment-total">0</span> đ</p>
+    </div>
+
+    <div class="popup-buttons">
+      <button id="confirm-payment" class="btn confirm">✅ Xác nhận thanh toán</button>
+      <button id="cancel-payment" class="btn cancel">❌ Hủy</button>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>VỀ SGUSPORT</h3>
+          <p>SGUSPORT là cửa hàng chuyên cung cấp giày bóng đá chính hãng, đảm bảo chất lượng và uy tín hàng đầu Việt Nam.</p>
+        </div>
+        <div class="footer-col">
+          <h3>LIÊN HỆ</h3>
+          <p>📍 273 An Dương Vương, Q.5, TP.HCM</p>
+          <p>📞 0909 123 456</p>
+          <p>✉️ sgusport@gmail.com</p>
+          <p>🕒 Làm việc: 8:00 - 21:00 (Thứ 2 - CN)</p>
+        </div>
+        <div class="footer-col">
+          <h3>THEO DÕI CHÚNG TÔI</h3>
+          <div class="social-links">
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 SGUSPORT | All Rights Reserved</p>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+<script src="./js/gh.js"></script>
+<script src="./js/ct.js"></script>
+
+</body>
+</html>
