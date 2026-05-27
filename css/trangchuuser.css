@@ -591,18 +591,3 @@ body {
     width: 50%;
   }
 }
-
-/* CSS dành riêng cho điện thoại */
-@media (max-width: 768px) {
-    /* Ví dụ: Cho các khung chứa sản phẩm rộng 100% để xếp chồng lên nhau thay vì dàn hàng ngang */
-    .product-card {
-        width: 100% !important;
-        margin-bottom: 20px;
-    }
-
-    /* Giúp hình ảnh không bị tràn ra ngoài màn hình điện thoại */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
