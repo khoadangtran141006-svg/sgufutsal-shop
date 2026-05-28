@@ -306,11 +306,11 @@ function initProducts() {
     const productGrid = document.getElementById("productGrid");
     if (!productGrid) return;
     productGrid.querySelectorAll(".card.dynamic").forEach(c => c.remove());
-    let sanPhamAdmin = JSON.parse(localStorage.getItem("sanPhamTrangChu") || "[]");
+    let sanPhamAdmin = JSON.parse(localStorage.getItem("sanPhamTrangChu_v2") || "[]");
     if (sanPhamAdmin.length === 0 && typeof sampleSP !== 'undefined') {
         console.log("LocalStorage trống, đang khởi tạo từ sampleSP...");
         sanPhamAdmin = sampleSP; 
-        localStorage.setItem("sanPhamTrangChu", JSON.stringify(sanPhamAdmin)); 
+        localStorage.setItem("sanPhamTrangChu_v2", JSON.stringify(sanPhamAdmin)); 
     }
     sanPhamAdmin.forEach(sp => {
       const card = document.createElement("div");
@@ -496,7 +496,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initProducts();
 });
 window.addEventListener("storage", (e) => {
-    if (e.key === "sanPhamTrangChu") {
+    if (e.key === "sanPhamTrangChu_v2") {
         console.log("🔄 Cập nhật sản phẩm từ admin...");
         initProducts(); 
     }
