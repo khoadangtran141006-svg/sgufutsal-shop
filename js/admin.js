@@ -764,12 +764,12 @@ function renderQLSanPham() {
 
   refresh();
   capNhatSanPhamUser(); 
-  console.log("ADMIN: Đã tự động cập nhật 'sanPhamTrangChu' cho user.");
+  console.log("ADMIN: Đã tự động cập nhật 'sanPhamTrangChu_v2' cho user.");
  
 }
 
 window.addEventListener("storage", (e) => {
-  if (e.key === "sanPhamTrangChu") {
+  if (e.key === "sanPhamTrangChu_v2") {
     console.log("🔄 Trang user được cập nhật sản phẩm mới từ admin!");
   }
 });
@@ -1630,6 +1630,6 @@ try {
         };
       });
 
-    localStorage.setItem("sanPhamTrangChu", JSON.stringify(dsHienThi));
+    localStorage.setItem("sanPhamTrangChu_v2", JSON.stringify(dsHienThi));
   }
 });
