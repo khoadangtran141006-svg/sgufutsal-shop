@@ -324,7 +324,7 @@ function initProducts() {
             <img src="${sp.hinh || 'img/noimage.jpg'}" alt="${sp.ten}">
             <p >${sp.ten}</p>
             <div class="card-footer">
-            <p class="price">${sp.gia?.toLocaleString('vi-VN') || 0}₫</p>
+            <p class="price">${sp.giaVon?.toLocaleString('vi-VN') || 0}₫</p>
             <button class="buy-btn">Mua ngay</button>
             </div>
  `;
