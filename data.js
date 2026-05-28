@@ -1,4 +1,3 @@
-
 const sampleUsers = [
   { ma: "KH001", ten: "Nguyễn Văn Khoa", email: "a@mail.com", sdt: "0900000001", trangthai: "Hoạt động", matkhau: "123456" },
   { ma: "KH002", ten: "Trần Thị Hân", email: "b@mail.com", sdt: "0900000002", trangthai: "Bị khóa", matkhau: "123456" }
@@ -20,7 +19,7 @@ const sampleSP = [
     an: false,
     brand: "Nike",
     giaVon: 5990000,
-    hinh: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAA",
+    hinh: "img/1.1.jpg",
     loaiGiay: "giaycotunhien",
     moTa: "Thiết kế hiện đại, nhẹ, thoáng khí. Giúp bạn kiểm soát bóng hoàn hảo."
   },
@@ -32,7 +31,7 @@ const sampleSP = [
     an: false,
     brand: "Nike",
     giaVon: 2350000,
-    hinh: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAA",
+    hinh: "img/1.2.jpg",
     loaiGiay: "giaycotunhien",
     moTa: "Chất liệu Flyknit mỏng, nhẹ, thoáng khí giúp làm giày nhẹ và dễ uốn hơn"
   },
@@ -44,7 +43,7 @@ const sampleSP = [
     an: false,
     brand: "Nike",
     giaVon: 9990000,
-    hinh: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAA",
+    hinh: "img/1.3.jpg",
     loaiGiay: "giaycotunhien",
     moTa: "Cảm giác mềm mại, ôm chân và độ bám bóng tốt hơn."
   },
@@ -56,7 +55,7 @@ const sampleSP = [
     an: false,
     brand: "Nike",
     giaVon: 7990000,
-    hinh: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAA",
+    hinh: "img/1.4.jpg",
     loaiGiay: "giaycotunhien",
     moTa: "Hệ thống đinh dăm kiểu mới giúp bám sân tốt hơn và vô cùng bền bỉ"
   },
@@ -68,7 +67,7 @@ const sampleSP = [
     an: false,
     brand: "Mizuno",
     giaVon: 950000,
-    hinh: "img/2.2.jpeg",
+    hinh: "img/2.2.jpg",
     loaiGiay: "giayfutsal",
     moTa: "Giày đá bóng mới nhất thuộc thế hệ thứ 3 của dòng \"Mizuno quốc dân\""
   },
@@ -116,7 +115,7 @@ const sampleSP = [
     an: false,
     brand: "Adidas",
     giaVon: 999000,
-    hinh: "img/2.3.jpeg",
+    hinh: "img/2.3.jpg",
     loaiGiay: "giayconhantao",
     moTa: "Upper sử dụng chất liệu Fiberskin mềm mại và thoáng khí, giúp đôi chân luôn thoải mái"
   },
@@ -128,7 +127,7 @@ const sampleSP = [
     an: false,
     brand: "Nike",
     giaVon: 1599000,
-    hinh: "img/2.4.jpeg",
+    hinh: "img/2.4.jpg",
     loaiGiay: "giayconhantao",
     moTa: "Khuôn đế mới với các đinh dăm hình Elip chống trơn trượt và giúp xoay chuyển linh hoạt"
   },
@@ -140,7 +139,7 @@ const sampleSP = [
     an: false,
     brand: "Puma",
     giaVon: 1050000,
-    hinh: "img/2.5.jpeg",
+    hinh: "img/2.5.jpg",
     loaiGiay: "giayconhantao",
     moTa: "Dải băng hình chữ V được mô phỏng theo công nghệ PWRTAPE trên phân khúc Pro"
   },
@@ -152,7 +151,7 @@ const sampleSP = [
     an: false,
     brand: "Nike",
     giaVon: 1599000,
-    hinh: "img/2.6.jpeg",
+    hinh: "img/2.6.jpg",
     loaiGiay: "giayconhantao",
     moTa: "Khuôn đế mới với các đinh dăm hình Elip chống trơn trượt và giúp xoay chuyển linh hoạt"
   },
@@ -164,7 +163,7 @@ const sampleSP = [
     an: false,
     brand: "Mizuno",
     giaVon: 899000,
-    hinh: "img/3.3.jpeg",
+    hinh: "img/3.3.jpg",
     loaiGiay: "giayfutsal",
     moTa: "Thiết kế cực kì đẹp mắt, sử dụng chất liệu cao cấp, êm ái mềm mại, ôm chân"
   },
@@ -188,7 +187,7 @@ const sampleSP = [
     an: false,
     brand: "Adidas",
     giaVon: 1850000,
-    hinh: "img/2.9.jpeg",
+    hinh: "img/2.9.jpg",
     loaiGiay: "giayconhantao",
     moTa: "Form ôm chân dành cho các cầu thủ có lối chơi tốc độ, dứt điểm"
   },
@@ -196,7 +195,13 @@ const sampleSP = [
     ma: "SP016",
     maLoai: "L001",
     ten: "Adidas Predator Accuracy .1 TF Marine Rush",
-    hinh: "img/2.10.jpeg"
+    accessory: "none",
+    an: false,
+    brand: "Adidas",
+    giaVon: 2450000,
+    hinh: "img/2.10.jpg",
+    loaiGiay: "giayconhantao",
+    moTa: "Kiểm soát bóng tối ưu, hỗ trợ bứt tốc cực tốt trên bề mặt sân cỏ nhân tạo."
   },
   {
     ma: "SP017",
@@ -206,7 +211,7 @@ const sampleSP = [
     an: false,
     brand: "Mizuno",
     giaVon: 3600000,
-    hinh: "img/2.11.jpeg",
+    hinh: "img/2.11.jpg",
     loaiGiay: "giayconhantao",
     moTa: "Công nghệ đệm giảm chấn giúp êm chân, hạn chế chấn thương khi tranh chấp bóng"
   },
@@ -218,7 +223,7 @@ const sampleSP = [
     an: false,
     brand: "Mizuno",
     giaVon: 999000,
-    hinh: "img/2.12.jpeg",
+    hinh: "img/2.12.jpg",
     loaiGiay: "giayconhantao",
     moTa: "Form dáng phù hợp với mọi form chân, đặc biệt là chân bè.Phù hợp với lối chơi sử sụng tốc độ, tấn công và dứt điểm"
   },
@@ -230,7 +235,7 @@ const sampleSP = [
     an: false,
     brand: "HangKhac",
     giaVon: 2150000,
-    hinh: "img/3.2.jpeg",
+    hinh: "img/3.2.jpg",
     loaiGiay: "giayfutsal",
     moTa: "Cấu tạo bằng da tự nhiên K cao cấp siêu mềm, siêu bền, cho cảm giác bóng tốt nhất"
   },
@@ -256,7 +261,7 @@ const sampleSP = [
     giaVon: 3990000,
     hinh: "img/1.11.jpg",
     loaiGiay: "giaycotunhien",
-    moTa: ""
+    moTa: "Đôi giày mang lại sự bứt tốc mạnh mẽ vượt trội trên mặt sân tự nhiên."
   },
   {
     ma: "SP022",
@@ -278,7 +283,7 @@ const sampleSP = [
     an: false,
     brand: "Puma",
     giaVon: 1150000,
-    hinh: "img/2.7.jpeg",
+    hinh: "img/2.7.jpg",
     loaiGiay: "giayconhantao",
     moTa: "Dải băng hình chữ V được mô phỏng theo công nghệ PWRTAPE trên phân khúc Pro"
   },
@@ -290,7 +295,7 @@ const sampleSP = [
     an: false,
     brand: "Puma",
     giaVon: 1650000,
-    hinh: "img/2.8.jpeg",
+    hinh: "img/2.8.jpg",
     loaiGiay: "giayconhantao",
     moTa: "Trọng lượng nhẹ, form dễ đi, thích hợp với nhiều hình dạng bàn chân.Kết cấu 3D được phân bổ trên thân giày hỗ trợ tăng khả năng kiểm soát bóng"
   },
@@ -302,7 +307,7 @@ const sampleSP = [
     an: false,
     brand: "Adidas",
     giaVon: 1490000,
-    hinh: "img/3.6.jpeg",
+    hinh: "img/3.6.jpg",
     loaiGiay: "giayconhantao",
     moTa: "Giày đá bóng adidas thiết kế thiên hướng kiểm soát bóng"
   },
@@ -314,7 +319,7 @@ const sampleSP = [
     an: false,
     brand: "Adidas",
     giaVon: 2190000,
-    hinh: "data:image/jpeg;base64,/9j/4QAiRXhpZgAASUkqAAgAAA",
+    hinh: "img/2.10.jpg", 
     loaiGiay: "giayconhantao",
     moTa: "Thiết kế tối ưu cho tốc độ và sự linh hoạt trên sân cỏ."
   },
@@ -326,11 +331,9 @@ const sampleSP = [
     an: false,
     brand: "Adidas",
     giaVon: 3190000,
-    hinh: "data:image/jpeg;base64,/9j/4QAiRXhpZgAASUkqAAgAAA",
+    hinh: "img/4.1.jpg",
     loaiGiay: "bongda",
-    ma: "SP027",
-    maLoai: "L002",
-    moTa: ""
+    moTa: "Quả bóng đạt tiêu chuẩn thi đấu quốc tế chuyên nghiệp."
   },
   {
     ma: "SP028",
@@ -340,9 +343,9 @@ const sampleSP = [
     an: false,
     brand: "HangKhac",
     giaVon: 69000,
-    hinh: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAA",
+    hinh: "img/4.2.jpg",
     loaiGiay: "vo",
-    moTa: ""
+    moTa: "Vớ chống trơn trượt giúp cố định bàn chân trong giày khi di chuyển nhanh."
   },
   {
     ma: "SP029",
@@ -352,9 +355,9 @@ const sampleSP = [
     an: false,
     brand: "Adidas",
     giaVon: 790000,
-    hinh: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAA",
+    hinh: "img/4.3.jpg",
     loaiGiay: "gangtay",
-    moTa: ""
+    moTa: "Đệm mút dày bám dính bóng cực tốt, bảo vệ đôi tay thủ môn."
   },
   {
     ma: "SP030",
@@ -364,9 +367,9 @@ const sampleSP = [
     an: false,
     brand: "HangKhac",
     giaVon: 90000,
-    hinh: "data:image/jpeg;base64,/9j/4QAiRXhpZgAASUkqAAgAAA",
+    hinh: "img/4.5.jpg",
     loaiGiay: "tui",
-    moTa: ""
+    moTa: "Thiết kế tiện lợi dùng để mang giày và vật dụng cá nhân ra sân."
   },
   {
     ma: "SP031",
@@ -378,7 +381,7 @@ const sampleSP = [
     giaVon: 599000,
     hinh: "img/4.4.jpg",
     loaiGiay: "bongda",
-    moTa: ""
+    moTa: "Bóng futsal độ nẩy thấp đạt chuẩn thi đấu trong nhà."
   },
   {
     ma: "SP032",
@@ -388,9 +391,9 @@ const sampleSP = [
     an: false,
     brand: "HangKhac",
     giaVon: 49000,
-    hinh: "data:image/jpeg;base64,/9j/4QAiRXhpZgAASUkqAAgAAA",
+    hinh: "img/4.8.jpg",
     loaiGiay: "vo",
-    moTa: ""
+    moTa: "Vớ cắt tiện lợi kết hợp linh hoạt với vớ chống trượt."
   },
   {
     ma: "SP033",
@@ -400,9 +403,9 @@ const sampleSP = [
     an: false,
     brand: "HangKhac",
     giaVon: 119000,
-    hinh: "data:image/jpeg;base64,/9j/4QAiRXhpZgAASUkqAAgAAA",
+    hinh: "img/4.7.jpg",
     loaiGiay: "tui",
-    moTa: ""
+    moTa: "Túi lưới thông thoáng, đựng được số lượng lớn bóng đá."
   },
   {
     ma: "SP034",
@@ -412,9 +415,9 @@ const sampleSP = [
     an: false,
     brand: "Adidas",
     giaVon: 950000,
-    hinh: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAA",
+    hinh: "img/4.8.jpg",
     loaiGiay: "bongda",
-    moTa: "."
+    moTa: "Phiên bản quả bóng họa tiết cúp C1 Champions League cao cấp."
   }
 ];
 
@@ -439,6 +442,7 @@ const sampleDon = [
     trangthai: "Mới đặt"
   }
 ];
+
 if (!localStorage.getItem("sanPhamTrangChu")) {
     localStorage.setItem("sanPhamTrangChu", JSON.stringify(sampleSP));
 }
