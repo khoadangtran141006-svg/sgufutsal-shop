@@ -443,8 +443,8 @@ const sampleDon = [
   }
 ];
 
-if (!localStorage.getItem("sanPhamTrangChu")) {
-    localStorage.setItem("sanPhamTrangChu", JSON.stringify(sampleSP));
+if (!localStorage.getItem("sanPhamTrangChu_v2")) {
+    localStorage.setItem("sanPhamTrangChu_v2", JSON.stringify(sampleSP));
 }
 
 if (!localStorage.getItem("ws_donhang_v1")) {
