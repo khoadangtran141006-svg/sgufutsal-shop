@@ -591,3 +591,107 @@ body {
     width: 50%;
   }
 }
+
+/* ==========================================================================
+   CSS RESPONSIVE CHO THIẾT BỊ DI ĐỘNG (Màn hình từ 768px trở xuống)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Sửa phần Header (Logo và Slogan) */
+    .header {
+        flex-direction: column; /* Đổi thành hàng dọc */
+        text-align: center;
+        gap: 10px;
+        padding: 15px 10px;
+    }
+    
+    .header .logo {
+        margin: 0 auto; /* Căn giữa logo */
+    }
+
+    /* 2. Sửa thanh Menu (.tabs) và các thành phần bên trong */
+    .tabs {
+        display: flex;
+        flex-wrap: wrap; /* Cho phép tự động xuống dòng khi thiếu chỗ */
+        justify-content: center;
+        gap: 6px;
+        padding: 10px;
+        height: auto !important; /* Reset lại chiều cao cố định (nếu có trên desktop) */
+    }
+
+    /* Định dạng lại các nút menu con (Tab) */
+    .tabs .tab {
+        font-size: 13px; /* Thu nhỏ chữ */
+        padding: 8px 12px;
+        flex: 1 1 calc(50% - 12px); /* Chia menu thành dạng lưới 2 cột đều nhau */
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Ẩn hoặc tối ưu lại dropdown menu trên di động để tránh bị đè chữ */
+    .tab-dropdown-content {
+        position: absolute;
+        width: 150px;
+        z-index: 99;
+    }
+
+    /* Đưa thanh tìm kiếm cơ bản và nút tài khoản xuống hẳn 1 hàng riêng rộng 100% */
+    .search-bar, .user-account {
+        flex: 1 1 100%; 
+        width: 100%;
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-bar input {
+        flex: 1; /* Cho ô input dài ra chiếm không gian */
+        padding: 8px;
+    }
+
+    /* 3. Sửa Form TÌM KIẾM NÂNG CAO (.search-advanced) */
+    .search-advanced {
+        display: flex;
+        flex-direction: column; /* Ép tất cả các ô xếp dọc thành 1 cột */
+        gap: 10px; /* Khoảng cách giữa các ô */
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Ép tất cả ô input, select, button trong mục nâng cao dài rộng bằng nhau */
+    .search-advanced input[type="text"],
+    .search-advanced id,
+    .search-advanced select,
+    .search-advanced input[type="number"],
+    .search-advanced button {
+        width: 100% !important;
+        margin: 0;
+        height: 40px; /* Tăng nhẹ chiều cao để ngón tay dễ ấn trúng trên điện thoại */
+        box-sizing: border-box;
+    }
+
+    /* 4. Tối ưu lại phần giới thiệu sản phẩm (Các ảnh đại diện) */
+    .brand-detail section img {
+        width: 100% !important; /* Ép ảnh bài viết không tràn viền, tự co giãn theo đt */
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .brand-detail section {
+        padding: 10px;
+    }
+    
+    /* 5. Tối ưu footer */
+    .footer-container {
+        display: flex;
+        flex-direction: column; /* Xếp dọc các cột thông tin ở chân trang */
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
